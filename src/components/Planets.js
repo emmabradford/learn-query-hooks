@@ -12,6 +12,17 @@ const Planets = ()=>{
     return(
         <div>
             <h2>Planetas, Planetas, Planetas</h2>
+            {status==='loading' && (
+                <div>Loading unadulterated loading...</div>
+            )}
+            {status==='error' && (
+                <div>no hay planetas</div>
+            )}
+            {status === 'success' &&(
+                <div>
+                    {data.results.map(planet =>)}
+                </div>
+            )}
         </div>
     );
 }
