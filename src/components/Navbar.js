@@ -1,10 +1,10 @@
 import React from "react";
 
-const Navbar = () => {
+const Navbar = ({ setPage }) => {
     return(
         <nav>
-            <button> Planetas</button>
-            <button> Personas</button>
+            <button onClick={()=> setPage('planets')}> Planetas</button>
+            <button onClick={()=> setPage('people')}> Personas</button>
         </nav>
     );
 }
